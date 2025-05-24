@@ -7,6 +7,7 @@ import logo1 from "../logo2.png";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [hover,setHover]=useState(false)
+  const [hover2,setHover2]=useState(false)
   const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
  
@@ -53,9 +54,32 @@ export default function Header() {
     </ul>
   )}
 </li>
+<li
+  key={3}
+  
+  onMouseEnter={() => setHover2(true)}
+  onMouseLeave={() => setHover2(false)}
+  //onClick={() => setHover((prev) => !prev)}
+ 
+  className="py-2 px-4  hover:text-black hover:bg-sky-400  rounded-md md:transition"
+>
+  <Link to="/industries">Industries <span className='ml-2 text-xs'>▼</span></Link>
+  {hover2 && (
+    <ul  className="mt-2 bg-white md:shadow-md rounded-md p-2 relative md:absolute z-10">
+       <li onClick={()=>setIsOpen(false)} className="py-1 px-2 rounded-md hover:text-black hover:bg-sky-400  text-black"><Link to="/insurence"><span className="inline-block text-xs m-2 transform rotate-[-90deg]">▼</span>   Insurance & Financial Sectors </Link> </li>
+      <li onClick={()=>setIsOpen(false)} className="py-1 px-2 rounded-md hover:text-black hover:bg-sky-400  text-black "> <Link to="/healthcare"><span className="inline-block text-xs m-2 transform rotate-[-90deg]">▼</span>   Healthcare</Link> </li>
+       <li onClick={()=>setIsOpen(false)} className="py-1 px-2 rounded-md hover:text-black hover:bg-sky-400  text-black "><Link to="/manufature"><span className="inline-block text-xs m-2 transform rotate-[-90deg]">▼</span>   Manufacturing</Link> </li>
+        <li onClick={()=>setIsOpen(false)} className="py-1 px-2 rounded-md hover:text-black hover:bg-sky-400  text-black "><Link to="/automobile"><span className="inline-block text-xs m-2 transform rotate-[-90deg]">▼</span>     Automobile </Link></li>
+         <li onClick={()=>setIsOpen(false)} className="py-1 px-2 rounded-md hover:text-black hover:bg-sky-400  text-black "><Link to="/ecommerce"><span className="inline-block text-xs m-2 transform rotate-[-90deg]">▼</span>    Retail & E-Commerce</Link></li>
+          <li onClick={()=>setIsOpen(false)} className="py-1 px-2 rounded-md hover:text-black hover:bg-sky-400  text-black "> <Link to="/hospitality"><span className="inline-block text-xs m-2 transform rotate-[-90deg]">▼</span>     Hospitality</Link></li>
+           <li onClick={()=>setIsOpen(false)} className="py-1 px-2 rounded-md hover:text-black hover:bg-sky-400  text-black "><Link to="/banking"><span className="inline-block text-xs m-2 transform rotate-[-90deg]">▼</span>     Banking</Link></li>
+            <li onClick={()=>setIsOpen(false)} className="py-1 px-2 rounded-md hover:text-black hover:bg-sky-400  text-black "><Link to="/supply-chain"><span className="inline-block text-xs m-2 transform rotate-[-90deg]">▼</span>     Supply Chain Management</Link></li>
+    </ul>
+  )}
+</li>
 
-        <li key={3} onClick={()=>setIsOpen(false)} className='py-2 px-4  hover:text-black hover:bg-sky-400  rounded-md transition'><Link to={"/carrers"}>Careers</Link></li>
-        <li key={4} onClick={()=>setIsOpen(false)} className='py-2 px-4  hover:text-black hover:bg-sky-400  rounded-md transition'><Link to={"/contact"}>Contact Us</Link></li>
+        <li key={4} onClick={()=>setIsOpen(false)} className='py-2 px-4  hover:text-black hover:bg-sky-400  rounded-md transition'><Link to={"/carrers"}>Careers</Link></li>
+        <li key={5} onClick={()=>setIsOpen(false)} className='py-2 px-4  hover:text-black hover:bg-sky-400  rounded-md transition'><Link to={"/contact"}>Contact Us</Link></li>
 </ul>
 
       </div>

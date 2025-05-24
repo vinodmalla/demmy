@@ -14,6 +14,15 @@ import Carrers from './Components/Carrers'
 import Contact from './Components/Contact'
 import ScrollTop from './Components/ScrollTop'
 import Footer from './Components/Footer'
+import Industries from './Components/Industries'
+import Insurance from './Components/Insurance'
+import Healthcare from './Components/Healthcare'
+import Manufacturing from './Components/Manufacturing'
+import Automobile from './Components/Automobile'
+import Ecommerce from './Components/Ecommerce'
+import  Hospitality from './Components/Hospitality'
+import Banking from './Components/Banking'
+import Chain from './Components/Chain'
 
 
 function App() {
@@ -82,7 +91,48 @@ export const approuter=createBrowserRouter([
       {
         path:"/contact",
         element:<Contact />
-      }
+      },{
+        path:"/industries",
+        element:<Industries />
+      },
+      {
+        path:"/insurence",
+        element:<Insurance />
+      
+      },
+      {
+        path:"/healthcare",
+        element:<Healthcare />
+      },
+      {
+        path:"manufature",
+        element:<Manufacturing />
+      },
+      {
+        path: "automobile",
+        element: <Automobile />
+      },
+      {
+        path: "ecommerce",
+        element: <Ecommerce />
+      },
+      {
+        path: "hospitality",
+        element: <Hospitality />
+      },{
+        path: "banking",
+         element: <Banking />
+        },
+        {
+          path: "supply-chain",
+           element: <Chain />
+        }
+
+
+
+
+
+
 
 
     ]
